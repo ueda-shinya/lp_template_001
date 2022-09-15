@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* 変数の定義 */
+:root {
+  --mobile-point: 600px; /* スマートフォン375 */
+  /* --tablet-vertical: 900px; タブレット縦置き */
+  --tablet-horizontal: 1100px; /* タブレット横置き */
+  --link-btn-color: #d5381b; /* FVボタンの色 */
+  --link-btn-text-color: #ffffff; /* FVボタンの文字の色 */
+  --fv_text_underline-color: #d5381b;
+}
+html {
+  font-size: clamp(1px, 1.45vw, 16px);
+}
+body {
+  font-family: “Lucida Grande”, ”Noto Sans JP”, “Noto Sans CJK JP”,
+    “Hiragino Kaku Gothic ProN”, sans-serif;
+}
+main {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+}
+header {
+  height: clamp(1px, 67.1vw, 738px);
+  background-image: url(../images/firstview.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: clamp(1px, 174.54vw, 1920px) clamp(1px, 67.1vw, 738px);
+  /* background-size: clamp(1px, 165vw, 1920px) clamp(1px, 63vw, 738px); */
+}
+.fv__text {
+  width: clamp(1px, 100vw, 1100px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.fv__text h1 {
+  position: absolute;
+  top: clamp(1px, 18vw, 200px);
+  left: clamp(1px, 2vw, 20px);
+  font-size: 4.25rem;
+  color: white;
+  font-weight: bold;
+  line-height: 4.5rem;
+}
+.fv__text h1 ::after {
+  content: '';
+  width: clamp(1px, 20.8vw, 256px);
+  height: 1rem;
+  display: inline-block;
+  background-color: var(--fv_text_underline-color);
+  position: absolute;
+  bottom: 0.625rem;
+  left: 2%;
+  z-index: -1;
+}
+.fv__text h1 .h1__s {
+  font-size: 2.9rem;
+}
+.fv__text h2 {
+  position: absolute;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  top: clamp(1px, 4.91vw, 54px);
+  left: clamp(1px, 3.82vw, 42px);
+  font-size: 1.25rem;
+  color: white;
+  line-height: 1.7rem;
+}
+.fv__text h3 {
+  position: absolute;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  top: clamp(1px, 37.1vw, 408px);
+  left: clamp(1px, 9.45vw, 104px);
+  font-size: 2rem;
+  color: white;
+  line-height: 2.1rem;
+  letter-spacing: -0.05rem;
+}
+.fv__text h3 .h3__s {
+  font-size: 1.25rem;
+}
+.fv__text h3 .h3__wo {
+  margin-left: -0.9rem;
+}
+.fv__text h3 .sp_2 {
+  margin-left: 2rem;
+}
+.fv__text .link__btn {
+  position: absolute;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  top: clamp(1px, 49.09vw, 540px);
+  left: clamp(1px, 9.45vw, 104px);
+  background-color: var(--link-btn-color);
+  border-radius: clamp(1px, 3.91vw, 43px);
+  font-size: 1.6rem;
+  padding: clamp(1px, 2.18vw, 24px) clamp(1px, 9.45vw, 104px) clamp(1px, 2.18vw, 24px) clamp(1px, 3.63vw, 40px);
+  color: var( --link-btn-text-color);
+  vertical-align: middle;
+}
+.fv__text .link__btn img{
+  position: absolute;
+  top: clamp(1px, 2.72vw, 30px);
+  left: clamp(1px, 23.27vw, 256px);
+  width: clamp(1px, 5.45vw, 60px);
+}
+
+
+/* レスポンシブ対応 */ 
+/* @media screen and (max-width: var(--mobile-point)) { */
+/* }  */
