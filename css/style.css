@@ -7,7 +7,10 @@
   --tablet-horizontal: 1100px; /* タブレット横置き */
   --link-btn-color: #d5381b; /* FVボタンの色 */
   --link-btn-text-color: #ffffff; /* FVボタンの文字の色 */
-  --fv_text_underline-color: #d5381b;
+  --fv-text-underline-color: #d5381b;
+  --servicename-text-color: #4fb7da;
+  --text-dot-color: #d5381b;
+  --happyvoice-color: #4fb7da;
 }
 html {
   font-size: clamp(1px, 1.45vw, 16px);
@@ -17,7 +20,7 @@ body {
     “Hiragino Kaku Gothic ProN”, sans-serif;
 }
 main {
-  max-width: var(--tablet-horizontal);
+  max-width: 1920px;
   margin: 0 auto;
 }
 header {
@@ -26,7 +29,6 @@ header {
   background-repeat: no-repeat;
   background-position: top;
   background-size: clamp(1px, 174.54vw, 1920px) clamp(1px, 67.1vw, 738px);
-  /* background-size: clamp(1px, 165vw, 1920px) clamp(1px, 63vw, 738px); */
 }
 .fv__text {
   width: clamp(1px, 100vw, 1100px);
@@ -48,7 +50,7 @@ header {
   width: clamp(1px, 20.8vw, 256px);
   height: 1rem;
   display: inline-block;
-  background-color: var(--fv_text_underline-color);
+  background-color: var(--fv-text-underline-color);
   position: absolute;
   bottom: 0.625rem;
   left: 2%;
@@ -96,18 +98,113 @@ header {
   background-color: var(--link-btn-color);
   border-radius: clamp(1px, 3.91vw, 43px);
   font-size: 1.6rem;
-  padding: clamp(1px, 2.18vw, 24px) clamp(1px, 9.45vw, 104px) clamp(1px, 2.18vw, 24px) clamp(1px, 3.63vw, 40px);
-  color: var( --link-btn-text-color);
+  padding: clamp(1px, 2.18vw, 24px) clamp(1px, 9.45vw, 104px)
+    clamp(1px, 2.18vw, 24px) clamp(1px, 3.63vw, 40px);
+  color: var(--link-btn-text-color);
   vertical-align: middle;
+  box-shadow: 0.33rem 0.33rem 0.625rem -0.33rem rgb(0, 0, 0);
 }
-.fv__text .link__btn img{
+.fv__text .link__btn img {
   position: absolute;
   top: clamp(1px, 2.72vw, 30px);
   left: clamp(1px, 23.27vw, 256px);
   width: clamp(1px, 5.45vw, 60px);
 }
+.introductio {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+  text-align: center;
+}
+.introductio h2 {
+  color: black;
+  font-size: 1.25rem;
+  margin-bottom: clamp(1px, 2.18vw, 24px);
+}
+.introductio h2 span {
+  color: var(--servicename-text-color);
+  font-size: 1.5rem;
+}
+.introductio h3 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.introductio h3 span {
+  text-emphasis: circle var(--text-dot-color);
+}
 
+.recommends {
+  display: flex;
+  font-size: 1.125rem;
+}
+.recommend {
+  width: clamp(1px, 32.72vw, 360px);
+  height: clamp(1px, 36.36vw, 400px);
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.recommend__text_1 {
+  margin-top: clamp(-350px, -31.82vw, 1px);
+}
+.recommend__text_2 {
+  margin-top: clamp(-340px, -30.91vw, 1px);
+}
+.recommend__text_3 {
+  margin-top: clamp(-340px, -30.91vw, 1px);
+}
+.recommend img {
+  width: clamp(1px, 32.72vw, 360px);
+}
 
-/* レスポンシブ対応 */ 
+.happyvoice {
+  height: clamp(1px, 67.1vw, 738px);
+  background-image: url(../images/firstview.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: clamp(1px, 174.54vw, 1920px) clamp(1px, 67.1vw, 738px);
+  text-align: center;
+}
+.voices {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+  display: flex;
+}
+.voice {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.solutions {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+  text-align: center;
+}
+.anxieties {
+  display: block;
+}
+.anxiety {
+  margin: 0 auto;
+}
+
+.points {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+  display: flex;
+}
+.point {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.message {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+}
+#form {
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+}
+
+/* レスポンシブ対応 */
 /* @media screen and (max-width: var(--mobile-point)) { */
 /* }  */
