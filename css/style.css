@@ -30,6 +30,7 @@ header {
   background-position: top;
   background-size: clamp(1px, 174.54vw, 1920px) clamp(1px, 67.1vw, 738px);
 }
+/*  */
 .fv__text {
   width: clamp(1px, 100vw, 1100px);
   margin: 0 auto;
@@ -110,9 +111,10 @@ header {
   left: clamp(1px, 23.27vw, 256px);
   width: clamp(1px, 5.45vw, 60px);
 }
+/*  */
 .introductio {
   max-width: var(--tablet-horizontal);
-  margin: 0 auto;
+  margin: 0 auto clamp(1px, 9.45vw, 104px);
   text-align: center;
 }
 .introductio h2 {
@@ -131,7 +133,7 @@ header {
 .introductio h3 span {
   text-emphasis: circle var(--text-dot-color);
 }
-
+/*  */
 .recommends {
   display: flex;
   font-size: 1.125rem;
@@ -155,14 +157,30 @@ header {
 .recommend img {
   width: clamp(1px, 32.72vw, 360px);
 }
-
+/*  */
 .happyvoice {
-  height: clamp(1px, 67.1vw, 738px);
-  background-image: url(../images/firstview.png);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: clamp(1px, 174.54vw, 1920px) clamp(1px, 67.1vw, 738px);
-  text-align: center;
+  position: relative;
+  z-index: -2;
+  height: clamp(1px, 60vw, 660px);
+  background-color: var(--happyvoice-color);
+  text-align: left;
+}
+.happyvoice h2 img {
+  position: absolute;
+  z-index: -1;
+  top: -75px;
+  left: 40vw;
+  width: 288px;
+  height: 180px;
+}
+.happyvoice h3 {
+  color: white;
+  font-size: 2rem;
+  margin-left: 485px;
+  letter-spacing: 0.1rem;
+}
+.happyvoice h3 span {
+  font-size: 3.75rem;
 }
 .voices {
   max-width: var(--tablet-horizontal);
@@ -170,8 +188,33 @@ header {
   display: flex;
 }
 .voice {
-  width: 30%;
+  width: 33%;
+  margin: 80px auto;
+  text-align: center;
+}
+.face {
+  width: 160px;
+  height: 160px;
+  margin: 24px auto;
+}
+.comment {
+  width: 293px;
+  height: 228px;
   margin: 0 auto;
+}
+.voice__text {
+  width: 280px;
+  height: 228px;
+  margin: -200px auto;
+  font-size: 1rem;
+}
+.voice__text .name {
+}
+.voice__text .score span {
+  
+}
+
+.voice__text .text_long {
 }
 
 .solutions {
