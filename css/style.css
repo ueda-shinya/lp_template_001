@@ -12,6 +12,7 @@
   --text-dot-color: #d5381b;
   --happyvoice-color: #4fb7da;
   --solition-color: #4fb7da;
+  --caret-down_color: #d5381b;
 }
 html {
   font-size: clamp(1px, 1.45vw, 16px);
@@ -165,17 +166,11 @@ header {
   text-align: left;
 }
 .happyvoice .happyvoice__img {
-  /* position: relative; */
-  /* z-index: -2; */
   max-width: var(--tablet-horizontal);
   margin: 0 auto;
   text-align: center;
 }
 .happyvoice .happyvoice__img h2 img {
-  /* position: absolute; */
-  /* z-index: -1; */
-  /* top: clamp(-75px, -6.82vw, 1px); */
-  /* left: 40vw; */
   width: clamp(1px, 26.18vw, 288px);
   height: clamp(1px, 16.36vw, 180px);
   margin-top: clamp(-75px, -6.82vw, 1px);
@@ -183,7 +178,7 @@ header {
 .happyvoice .happyvoice__img h3 {
   color: white;
   font-size: 2rem;
-  margin: clamp(-104px, -9.452vw, 1px); auto;
+  margin: clamp(-104px, -9.452vw, 1px) auto;
   letter-spacing: 0.1rem;
 }
 .happyvoice .happyvoice__img h3 span {
@@ -229,12 +224,12 @@ header {
 /*  */
 .solutions {
   max-width: var(--tablet-horizontal);
-  margin: 104px auto 0;
+  margin: clamp(1px, 9.45vw, 104px) auto 0;
   text-align: center;
 }
 .solutions h2 {
   font-size: 1.5rem;
-  margin-bottom: 24px;
+  margin-bottom: clamp(1px, 2.18vw, 24px);
 }
 .solutions h3 {
   font-size: 2rem;
@@ -245,20 +240,19 @@ header {
   color: var(--fv-text-underline-color);
 }
 .solutions img {
-  margin: 20px auto 32px;
-  width: 480px;
+  margin: clamp(1px, 1.82vw, 20px) auto clamp(1px, 2.91vw, 32px);
+  width: clamp(1px, 43.64vw, 480px);
 }
 .anxieties {
   display: block;
 }
 .anxiety {
-  width: 816px;
-  height: 240px;
-  /* background-color: var(--solition-color); */
-  margin: 0 auto 136px;
+  width: clamp(1px, 74.18vw, clamp(1px, 74.18vw, 816px));
+  height: clamp(1px, 21.82vw, 240px);
+  margin: 0 auto clamp(1px, 12.36vw, 136px);
 }
 .anxiety h4 {
-  margin-left: -40px;
+  margin-left: clamp(-40px, -3.64vw, 1px);
   font-size: 1.875rem;
   text-align: left;
   display: flex;
@@ -273,21 +267,20 @@ header {
 }
 .anxiety h4::before {
   content: '';
-  width: 96px;
-  height: 6px;
+  width: clamp(1px, 8.73vw, 96px);
+  height: 0.375rem;
   display: inline-block;
   background-color: white;
   position: absolute;
-  bottom: 16px;
+  bottom: 1rem;
   left: 100px;
 }
 .anxiety .anxiety__text {
-  /* width: 696px; */
-  width: 816px;
-  height: 240px;
+  width: clamp(1px, 74.18vw, 816px);
+  height: clamp(1px, 21.82vw, 240px);
   background-color: var(--solition-color);
-  margin: -45px auto 0;
-  padding: 60px 45px 0 66px;
+  margin: clamp(-45px, -4.09vw, 1px) auto 0;
+  padding: clamp(1px, 5.45vw, 60px) clamp(1px, 4.09vw, 45px) 0 clamp(1px, 6vw, 66px);
   font-size: 1.125rem;
   line-height: 1.8rem;
   text-align: justify;
@@ -295,12 +288,101 @@ header {
 .anxiety .anxiety__text span {
   background-color: white;
 }
+.solutions__area {
+  font-size: 2rem;
+  color: var(--caret-down_color);
+  text-align: center;
+}
+.solutions__area p {
+  font-size: 1.5rem;
+}
+.solutions__message {
+  width: clamp(1px, 73.45vw, 808px);
+  height: clamp(1px, 6.55vw, 72px);
+  margin: clamp(1px, 6.41vw, 64px) auto;
+  padding-top: clamp(1px, 1.82vw, 20px);
+  font-size: 1.875rem;
+  font-weight: bold;
+  border: var(--caret-down_color) solid 0.55rem;
+  border-radius: clamp(1px, 3.27vw, 36px);
+}
+.solutions__worry {
+  margin-top: clamp(1px, 9.45vw, 104px);
+  display: flex;
+  text-align: left;
+}
+.worry_img{
+  margin: clamp(1px, 13.10vw, 144px) 0 0 clamp(1px, 26.18vw, 288px);
+}
+.worry_img img {
+  width: clamp(1px, 14.18vw, 156px);
+  margin: 0;
+}
+.bubble_img img {
+  width: clamp(1px, 32.18vw, 354px);
+  margin: 0;
+}
+.bubble_img p {
+  margin: clamp(-168px, -15.27vw, 1px) 0 0 clamp(1px, 5.82vw, 64px);
+  font-size: 1.5rem;
+  color: white;
+}
+.bubble_img p span {
+  text-emphasis: circle var(--text-dot-color);
+}
+.foryou img{
+  width: clamp(1px, 34.82vw, 383px);
+  height: clamp(1px, 4.45vw, 49px);
+  margin: 1rem atuo 0;
+}
+.present{
+  max-width: var(--tablet-horizontal);
+ background-size: contain;
+ background-repeat: no-repeat;
+  margin: 0 auto;
+  background-image: url(../images/lavel.png);
+}
+.present h2{
+padding-top: clamp(1px, 2.55vw, 28px);
+padding-left: clamp(1px, 22.09vw, 243px);
+margin-bottom: clamp(1px, 5.09vw, 56px);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.present h2 span{
+  font-size: 2.31rem;
+  font-weight: normal;
+}
+.present__img{
+  margin-bottom: clamp(1px, 2.18vw, 24px);
+  display: flex;
+  font-size: 1.5rem;
+}
+.present__img img{
+  width: clamp(1px, 18.82vw, 207px);
+  margin-left: clamp(1px, 15.45vw, 170px);
+}
+.present__img p{
+  margin-top: clamp(1px, 7.27vw, 80px);
+  margin-left: clamp(1px, 2.18vw, 24px);
+}
+.present__img .down{
+  margin-top: clamp(1px, 3.27vw, 36px);
+  margin-left: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--caret-down_color);
+}
 
 .points {
-  max-width: var(--tablet-horizontal);
+  height: clamp(1px, 65.91vw, 725px);
   margin: 0 auto;
   display: flex;
 }
+
+
+
 .point {
   width: 30%;
   margin: 0 auto;
