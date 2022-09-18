@@ -344,7 +344,7 @@ header {
 }
 .present h2{
 padding-top: clamp(1px, 2.55vw, 28px);
-padding-left: clamp(1px, 22.09vw, 243px);
+padding-left: clamp(1px, 23.27vw, 256px);
 margin-bottom: clamp(1px, 5.09vw, 56px);
   color: white;
   font-size: 3rem;
@@ -374,19 +374,32 @@ margin-bottom: clamp(1px, 5.09vw, 56px);
   font-size: 1.5rem;
   color: var(--caret-down_color);
 }
-
 .points {
-  height: clamp(1px, 65.91vw, 725px);
+  height: clamp(1px, 36.36vw, 400px);
   margin: 0 auto;
   display: flex;
+  text-align: center;
+  justify-content: space-evenly;
 }
-
-
-
 .point {
-  width: 30%;
-  margin: 0 auto;
+  width: clamp(1px, 19.09vw, 210px);
+  margin: clamp(1px, 4.55vw, 50px);
+  font-size: 1.127rem;
 }
+.point .point_box{
+  height: clamp(1px, 4.36vw, 48px);
+  padding-top: clamp(1px, 1.09vw, 12px);
+  background-color: var(--text-dot-color);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+.point img{
+  width: clamp(1px, 16.73vw, 184px);
+  margin: 0.75rem auto 0.75rem;
+}
+
+
 
 .message {
   max-width: var(--tablet-horizontal);
