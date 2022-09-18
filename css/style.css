@@ -11,6 +11,7 @@
   --servicename-text-color: #4fb7da;
   --text-dot-color: #d5381b;
   --happyvoice-color: #4fb7da;
+  --solition-color: #4fb7da;
 }
 html {
   font-size: clamp(1px, 1.45vw, 16px);
@@ -168,15 +169,15 @@ header {
 .happyvoice h2 img {
   position: absolute;
   z-index: -1;
-  top: -75px;
+  top: clamp(-75px, -6.82vw, 1px);
   left: 40vw;
-  width: 288px;
-  height: 180px;
+  width: clamp(1px, 26.18vw, 288px);
+  height: clamp(1px, 16.36vw, 180px);
 }
 .happyvoice h3 {
   color: white;
   font-size: 2rem;
-  margin-left: 485px;
+  margin-left: clamp(1px, 44.1vw, 485px);
   letter-spacing: 0.1rem;
 }
 .happyvoice h3 span {
@@ -188,45 +189,105 @@ header {
   display: flex;
 }
 .voice {
-  width: 33%;
-  margin: 80px auto;
+  width: clamp(1px, 26.18vw, 288px);
+  margin: clamp(1px, 7.27vw, 80px) auto;
   text-align: center;
 }
 .face {
-  width: 160px;
-  height: 160px;
-  margin: 24px auto;
+  width: clamp(1px, 14.55vw, 160px);
+  height: clamp(1px, 14.55vw, 160px);
+  margin: clamp(1px, 2.18vw, 24px) auto;
 }
 .comment {
-  width: 293px;
-  height: 228px;
+  width: clamp(1px, 26.64vw, 293px);
+  height: clamp(1px, 20.73vw, 228px);
   margin: 0 auto;
 }
 .voice__text {
-  width: 280px;
-  height: 228px;
-  margin: -200px auto;
+  width: 90%;
+  height: clamp(1px, 20.73vw, 228px);
+  margin: clamp(-200px, -18.18vw, -1px) auto;
   font-size: 1rem;
 }
 .voice__text .name {
+  margin: 0.8rem;
 }
 .voice__text .score span {
-  
+  font-size: 1.5rem;
 }
-
 .voice__text .text_long {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
 }
-
+/*  */
 .solutions {
   max-width: var(--tablet-horizontal);
-  margin: 0 auto;
+  margin: 104px auto 0;
   text-align: center;
+}
+.solutions h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+.solutions h3 {
+  font-size: 2rem;
+}
+.solutions h3 span {
+  font-size: 3.75rem;
+  font-weight: bold;
+  color: var(--fv-text-underline-color);
+}
+.solutions img {
+  margin: 20px auto 32px;
+  width: 480px;
 }
 .anxieties {
   display: block;
 }
 .anxiety {
-  margin: 0 auto;
+  width: 816px;
+  height: 240px;
+  /* background-color: var(--solition-color); */
+  margin: 0 auto 136px;
+}
+.anxiety h4 {
+  margin-left: -40px;
+  font-size: 1.875rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.anxiety h4 span {
+  font-size: 4.75rem;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--fv-text-underline-color);
+}
+.anxiety h4::before {
+  content: '';
+  width: 96px;
+  height: 6px;
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 100px;
+}
+.anxiety .anxiety__text {
+  /* width: 696px; */
+  width: 816px;
+  height: 240px;
+  background-color: var(--solition-color);
+  margin: -45px auto 0;
+  padding: 60px 45px 0 66px;
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+  text-align: justify;
+}
+.anxiety .anxiety__text span {
+  background-color: white;
 }
 
 .points {
