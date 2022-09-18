@@ -160,27 +160,33 @@ header {
 }
 /*  */
 .happyvoice {
-  position: relative;
-  z-index: -2;
   height: clamp(1px, 60vw, 660px);
   background-color: var(--happyvoice-color);
   text-align: left;
 }
-.happyvoice h2 img {
-  position: absolute;
-  z-index: -1;
-  top: clamp(-75px, -6.82vw, 1px);
-  left: 40vw;
+.happyvoice .happyvoice__img {
+  /* position: relative; */
+  /* z-index: -2; */
+  max-width: var(--tablet-horizontal);
+  margin: 0 auto;
+  text-align: center;
+}
+.happyvoice .happyvoice__img h2 img {
+  /* position: absolute; */
+  /* z-index: -1; */
+  /* top: clamp(-75px, -6.82vw, 1px); */
+  /* left: 40vw; */
   width: clamp(1px, 26.18vw, 288px);
   height: clamp(1px, 16.36vw, 180px);
+  margin-top: clamp(-75px, -6.82vw, 1px);
 }
-.happyvoice h3 {
+.happyvoice .happyvoice__img h3 {
   color: white;
   font-size: 2rem;
-  margin-left: clamp(1px, 44.1vw, 485px);
+  margin: clamp(-104px, -9.452vw, 1px); auto;
   letter-spacing: 0.1rem;
 }
-.happyvoice h3 span {
+.happyvoice .happyvoice__img h3 span {
   font-size: 3.75rem;
 }
 .voices {
@@ -190,7 +196,7 @@ header {
 }
 .voice {
   width: clamp(1px, 26.18vw, 288px);
-  margin: clamp(1px, 7.27vw, 80px) auto;
+  margin: clamp(1px, 14.55vw, 160px) auto;
   text-align: center;
 }
 .face {
