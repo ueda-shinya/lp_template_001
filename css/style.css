@@ -11,9 +11,9 @@
   --servicename-text-color: #4fb7da;
   --text-dot-color: #d5381b;
   --happyvoice-color: #4fb7da;
-  --solition-color: #4fb7da;
+  --solition-color: #4fb7dab3;
   --caret-down_color: #d5381b;
-  --form_color: #a8e4da;
+  --form_color: #4fb7da4d;
 }
 html {
   font-size: clamp(1px, 1.45vw, 16px);
@@ -25,6 +25,9 @@ body {
 main {
   max-width: 1920px;
   margin: 0 auto;
+}
+.sp-br {
+  display: none;
 }
 header {
   height: clamp(1px, 67.1vw, 738px);
@@ -261,6 +264,7 @@ header {
   position: relative;
 }
 .anxiety h4 span {
+  margin-right: clamp(1px, 1.82vw, 20px);
   font-size: 4.75rem;
   font-weight: bold;
   font-style: italic;
@@ -273,8 +277,8 @@ header {
   display: inline-block;
   background-color: white;
   position: absolute;
-  bottom: 1rem;
-  left: 100px;
+  bottom: clamp(1px, 1.09vw, 12px);
+  left: clamp(1px, 10.33vw, 124px);
 }
 .anxiety .anxiety__text {
   width: clamp(1px, 74.18vw, 816px);
@@ -302,7 +306,7 @@ header {
   width: clamp(1px, 73.45vw, 808px);
   height: clamp(1px, 6.55vw, 72px);
   margin: clamp(1px, 6.41vw, 64px) auto;
-  padding-top: clamp(1px, 1.82vw, 20px);
+  padding-top: clamp(1px, 1.45vw, 16px);
   font-size: 1.875rem;
   font-weight: bold;
   border: var(--caret-down_color) solid 0.55rem;
@@ -440,7 +444,6 @@ header {
   line-height: 1.4rem;
   text-align: justify;
 }
-
 .message_step {
   text-align: center;
 }
@@ -478,7 +481,7 @@ header {
   margin: 0;
 }
 .step_area p {
-  margin: clamp(-200px, -18.18vw, -1px) 0 0 clamp(-235px, -21.36vw, -1px);
+  margin: clamp(-205px, -18.63vw, -1px) 0 0 clamp(-235px, -21.36vw, -1px);
   color: var(--text-dot-color);
   text-align: center;
   font-size: 1rem;
@@ -593,5 +596,8 @@ header {
 }
 
 /* レスポンシブ対応 */
-/* @media screen and (max-width: var(--mobile-point)) { */
-/* }  */
+@media screen and (max-width: 600px) {
+  .sp-br {
+    display: contents;
+  }
+}
