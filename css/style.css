@@ -2,7 +2,8 @@
 
 /* 変数の定義 */
 :root {
-  --mobile-point: 600px; /* スマートフォン375 */
+  --min-width: 375px;
+  --mobile-point: 700px; /* スマートフォン375 */
   --tablet-vertical: 700px; /*タブレット縦置き*/
   --tablet-horizontal: 1100px; /* タブレット横置き */
   --link-btn-color: #d5381b; /* FVボタンの色 */
@@ -16,7 +17,7 @@
   --form_color: #4fb7da4d;
 }
 html {
-  font-size: clamp(1px, 1.45vw, 16px);
+  font-size: clamp(10px, 1.45vw, 16px);
 }
 body {
   font-family: “Lucida Grande”, ”Noto Sans JP”, “Noto Sans CJK JP”,
@@ -26,8 +27,11 @@ main {
   max-width: 1920px;
   margin: 0 auto;
 }
-.sp-br {
+.sp_select {
   display: none;
+}
+.pc_select {
+  display: contents;
 }
 header {
   height: clamp(1px, 67.1vw, 738px);
@@ -36,7 +40,7 @@ header {
   background-position: top;
   background-size: clamp(1px, 174.54vw, 1920px) clamp(1px, 67.1vw, 738px);
 }
-/*  */
+/* firstview */
 .fv__text {
   width: clamp(1px, 100vw, 1100px);
   margin: 0 auto;
@@ -55,11 +59,11 @@ header {
 .fv__text h1 ::after {
   content: '';
   width: clamp(1px, 20.8vw, 256px);
-  height: 1rem;
+  height: clamp(1px, 1.45vw, 13px);
   display: inline-block;
   background-color: var(--fv-text-underline-color);
   position: absolute;
-  bottom: 0.625rem;
+  bottom: clamp(1px, 0.91vw, 10px);
   left: 2%;
   z-index: -1;
 }
@@ -117,26 +121,26 @@ header {
   left: clamp(1px, 23.27vw, 256px);
   width: clamp(1px, 5.45vw, 60px);
 }
-/*  */
-.introductio {
+/* introduction */
+.introduction {
   max-width: var(--tablet-horizontal);
   margin: 0 auto clamp(1px, 9.45vw, 104px);
   text-align: center;
 }
-.introductio h2 {
+.introduction h2 {
   color: black;
   font-size: 1.25rem;
   margin-bottom: clamp(1px, 2.18vw, 24px);
 }
-.introductio h2 span {
+.introduction h2 span {
   color: var(--servicename-text-color);
   font-size: 1.5rem;
 }
-.introductio h3 {
+.introduction h3 {
   font-size: 1.5rem;
   line-height: 1.8rem;
 }
-.introductio h3 span {
+.introduction h3 span {
   text-emphasis: circle var(--text-dot-color);
 }
 /*  */
@@ -163,7 +167,7 @@ header {
 .recommend img {
   width: clamp(1px, 32.72vw, 360px);
 }
-/*  */
+/* happyvoice */
 .happyvoice {
   height: clamp(1px, 60vw, 660px);
   background-color: var(--happyvoice-color);
@@ -221,7 +225,7 @@ header {
   font-size: 1.5rem;
 }
 .voice__text .text_long {
-  margin-top: 1rem;
+  margin-top: clamp(1px, 1.45vw, 16px);
   line-height: 1.5rem;
   text-align: justify;
 }
@@ -251,7 +255,7 @@ header {
   display: block;
 }
 .anxiety {
-  width: clamp(1px, 74.18vw, clamp(1px, 74.18vw, 816px));
+  width: clamp(1px, 74.18vw, 816px);
   height: clamp(1px, 21.82vw, 240px);
   margin: 0 auto clamp(1px, 12.36vw, 136px);
 }
@@ -295,6 +299,7 @@ header {
   background-color: white;
 }
 .solutions__area {
+  width: 100%;
   font-size: 2rem;
   color: var(--caret-down_color);
   text-align: center;
@@ -335,6 +340,9 @@ header {
 }
 .bubble_img p span {
   text-emphasis: circle var(--text-dot-color);
+}
+.foryou {
+  width: 100%;
 }
 .foryou img {
   width: clamp(1px, 34.82vw, 383px);
@@ -440,7 +448,6 @@ header {
 }
 .message__text p {
   width: clamp(1px, 64.55vw, 710px);
-  /* width: 94%; */
   line-height: 1.4rem;
   text-align: justify;
 }
@@ -502,7 +509,7 @@ header {
   text-align: left;
   color: white;
 }
-/*  */
+/* form */
 #form {
   max-width: var(--tablet-horizontal);
   height: clamp(1px, 83.63vw, 920px);
@@ -517,14 +524,18 @@ header {
   margin-top: clamp(-50px, -4.55vw, -1px);
 }
 #form h2 {
+  width: 100%;
   color: white;
-  margin: clamp(-90px, -8.18vw, -1px);
+  margin-top: clamp(-90px, -8.18vw, -1px);
   font-size: 2rem;
 }
 .form__area {
   width: clamp(1px, 37.82vw, 416px);
   margin: clamp(1px, 18.18vw, 200px) auto 0;
   text-align: left;
+}
+#subscribe {
+  width: 100%;
 }
 #subscribe p {
   margin-bottom: clamp(1px, 0.73vw, 8px);
@@ -573,31 +584,172 @@ header {
   margin-top: clamp(1px, 6.55vw, 72px);
 }
 
-@media screen and (max-width: 700px) {
-  .message__img {
-    width: 18%;
-  }
-  .message__img img {
-    width: 70%;
-    margin-top: clamp(1px, 4.73vw, 52px);
-  }
-  .message__text {
-    width: 82%;
-  }
-  .message__text .message_title {
-    margin: clamp(1px, 0.9vw, 8px) 0 clamp(1px, 0.8vw, 8px);
-  }
-  .message__text h3 {
-    margin-bottom: clamp(1px, 1.455vw, 16px);
-  }
-  .message__text p {
-    width: 96%;
-  }
-}
-
 /* レスポンシブ対応 */
-@media screen and (max-width: 600px) {
-  .sp-br {
+@media screen and (max-width: 700px) {
+  html {
+    font-size: clamp(10px, 2.66vw, 30px);
+  }
+  main {
+    min-width: var(--min-width);
+  }
+  .sp_select {
     display: contents;
+  }
+  .pc_select {
+    display: none;
+  }
+  /* header */
+  header {
+    height: clamp(402px, 107.2vw, 1100px);
+    background-image: url(../images/fv-sp.png);
+    background-position: top left;
+    background-size: clamp(375px, 100vw, 1100px) clamp(402px, 107.2vw, 1100px);
+  }
+  .fv__text {
+    width: clamp(375px, 100vw, 1100px);
+  }
+  .fv__text h1 {
+    top: clamp(130px, 34.67vw, 1100px);
+    left: clamp(30px, 8vw, 1100px);
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .fv__text h1 ::after {
+    width: clamp(110px, 29.33vw, 1100px);
+    height: clamp(8px, 2.13vw, 1100px);
+    bottom: clamp(10px, 0.57vw, 1100px);
+    left: 0.5%;
+  }
+  .fv__text h1 .h1__s {
+    font-size: 1.3rem;
+  }
+  .fv__text h2 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    top: clamp(30px, 8vw, 1100px);
+    left: clamp(25px, 6.67vw, 1100px);
+  }
+  .fv__text h3 {
+    top: clamp(316px, 84.27vw, 1100px);
+    left: clamp(18px, 4.8vw, 1100px);
+    font-size: 1.8rem;
+    color: black;
+    text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white,
+      0px 0px 5px white, 0px 0px 5px white;
+    line-height: 2rem;
+    letter-spacing: -0.1rem;
+  }
+  .fv__text h3 .h3__s {
+    font-size: 1.2rem;
+  }
+  .fv__text .link__btn {
+    top: clamp(360px, 96vw, 1100px);
+    left: clamp(40px, 10.67vw, 1100px);
+    padding: clamp(12px, 3.2vw, 1100px) clamp(58px, 15.47vw, 1100px)
+      clamp(12px, 3.2vw, 1100px) clamp(24px, 6.4vw, 1100px);
+    border-radius: clamp(20px, 5.33vw, 1100px);
+    font-size: 1.6rem;
+  }
+  .fv__text .link__btn img {
+    top: clamp(18px, 4.8vw, 1100px);
+    left: clamp(158px, 42.13vw, 1100px);
+    width: clamp(28px, 7.47vw, 1100px);
+  }
+  /* introduction */
+  .introduction {
+    min-width: var(--min-width);
+    margin-top: clamp(56px, 14.93vw, 1100px);
+  }
+  .introduction h2 {
+    font-size: 1.6rem;
+  }
+  .introduction h2 span {
+    font-size: 1.8rem;
+  }
+  .introduction h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  .recommends {
+    display: block;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .recommend {
+    width: clamp(320px, 85.33vw, 1100px);
+    height: clamp(90px, 24vw, 1100px);
+    margin: 0 auto;
+    text-align: left;
+  }
+  .recommend img {
+    width: clamp(320px, 85.33vw, 1100px);
+  }
+  .recommend__text_1 {
+    margin-top: clamp(-1000px, -15.2vw, -57px);
+    margin-left: clamp(125px, 33.33vw, 1100px);
+  }
+  .recommend__text_2 {
+    margin-top: clamp(-1000px, -13.33vw, -50px);
+    margin-left: clamp(25px, 6.67vw, 1100px);
+  }
+  .recommend__text_3 {
+    margin-top: clamp(-1000px, -13.33vw, -50px);
+    margin-left: clamp(125px, 33.33vw, 1100px);
+  }
+
+  /* jappyvoice */
+  .happyvoice {
+    height: clamp(699px, 185.6vw, 99999px);
+    margin-top: 104px;
+  }
+  .happyvoice .happyvoice__img {
+    min-width: var(--min-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+  .happyvoice .happyvoice__img h2 img {
+    width: clamp(140px, 37.33vw, 1100px);
+    height: clamp(90px, 24vw, 1100px);
+    margin-top: clamp(-1000px, -12vw, -45px);
+  }
+  .happyvoice .happyvoice__img h3 {
+    margin-top: clamp(-1000px, -10.67vw, -40px);
+    margin-bottom: clamp(-1000px, -4.27vw, -16px);
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 2rem;
+  }
+  .happyvoice .happyvoice__img h3 span {
+    font-size: 1.8rem;
+  }
+  .voices {
+    min-width: var(--min-width);
+    display: block;
+  }
+  .voice {
+    display: flex;
+    width:  clamp(302px, 80.53vw, 1100px);
+    margin: clamp(30px, 8vw, 1100px)30px auto;
+  }
+  .voice__img_area{
+    width:  clamp(86px, 22.93vw, 1100px);
+    display: block;
+  }
+  .voice__text{
+    width: clamp(211px, 56.27vw, 1100px);
+    height: clamp(171px, 45.6vw, 1100px);
+    margin: 0;
+  }
+  .voice__text img{
+    width: clamp(211px, 56.27vw, 1100px);
+    height: clamp(171px, 45.6vw, 1100px);
+  }
+  .voice__text .text_long{
+    width: 86%;
+    margin: 0 auto;
+    margin-top:  clamp(-1000px, -37.33vw, -140px);
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 2.2rem;
   }
 }
