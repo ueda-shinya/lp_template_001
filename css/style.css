@@ -728,7 +728,7 @@ header {
   }
   .voice {
     display: flex;
-    width:  clamp(302px, 80.53vw, 1100px);
+    width:  clamp(311px, 82.93vw, 1100px);
     margin: clamp(30px, 8vw, 1100px)30px auto;
   }
   .voice__img_area{
@@ -751,5 +751,18 @@ header {
     font-size: 1.6rem;
     text-align: justify;
     line-height: 2.2rem;
+  }
+  .voice__img_area{
+     width: clamp(100px, 26.67vw, 1100px);
+    margin: 0 auto;
+    color:white;
+    font-size: 1.4rem;
+  }
+  .voice__img_area img{
+    width: clamp(80px, 21.33vw, 1100px);
+    height: clamp(80px, 21.33vw, 1100px);
+  }
+  .voice__text .score span {
+    font-size: 1.8rem;
   }
 }
