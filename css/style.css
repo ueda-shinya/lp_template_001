@@ -584,6 +584,7 @@ header {
 }
 .last_message {
   margin-top: clamp(1px, 6.55vw, 72px);
+  padding-bottom: 36px;
 }
 
 /* レスポンシブ対応 */
@@ -857,11 +858,10 @@ header {
   }
   .present {
     min-width: var(--min-width);
-    /* background-size: clamp(375px, 100vw, 1100px)
-      clamp(345px, 92vw, 1100px); */
-    background-size: cover;
+    height: 345px;
+    background-size:contain;
     background-image: url(../images/label_sp.png);
-    margin: 0 auto;
+    margin: 0 auto 40px;
   }
   .present h2 {
     padding-top: clamp(13px, 3.47vw, 1100px);
@@ -876,7 +876,7 @@ header {
     margin-bottom: clamp(5px, 1.37vw, 1100px);
   }
   .present__img img {
-    width: 77px;
+    width: clamp(77px,20.53vw, 1100px);
     margin-left: clamp(40px, 10.67vw, 1100px);
   }
   .present__img p {
@@ -963,14 +963,15 @@ header {
 
   .steps_area {
     display: block;
+    margin-top: 10px;
   }
   .step_area {
     width: 100%;
-    margin: 0;
+    margin: -10px auto 0;
     text-align: center;
   }
   .step_area:not(:last-child):after {
-    margin: 0;
+    margin: 15px auto 0;
     transform: rotate(0deg);
   }
   .step_area img {
@@ -978,19 +979,72 @@ header {
     margin: 0;
   }
   .step_area p {
-    margin: -80px 0px 0px px;
+    width: 50px;
+    margin: -74px 0px 0px 29px;
     font-size: 1rem;
   }
   .step_area p span {
     font-size: 2.4rem;
   }
   .step_text {
-    align-items: center;
+    text-align: center;
   }
   .step_text p {
+    width: 300px;
     height: 30px;
-    margin: 0;
+    margin: 0 0 0 20px;
+    text-align: center;
     font-size: 1.4rem;
-    color: #d22302;
+  }
+  #form {
+    width: 355px;
+    height: 510px;
+    margin: 70px auto 0;
+    border-radius: 10px;
+  }
+  #form img {
+    width: 284px;
+    height: 69px;
+  }
+  #form h2 {
+    width: 100%;
+    margin: -60px auto 20px;
+    font-size: 18px;
+  }
+  .form__area {
+    width: 280px;
+    height: 445px;
+    margin: 0 auto 0;
+    text-align: center;
+  }
+
+  #subscribe p {
+    font-size: 16px;
+    text-align: left;
+  }
+  #subscribe input {
+    margin: 0 auto 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+  }
+  #subscribe .send_btn {
+    width: 355px;
+    height: 50px;
+    margin: 15px 0 0 -38px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+  #subscribe img {
+    width: 33px;
+    top: 20px;
+    left: 250px;
+  }
+  .last_message{
+    font-size: 1.2rem;
+    padding-bottom: 30px;
+
   }
 }
+
