@@ -314,7 +314,7 @@ header {
   width: clamp(1px, 73.45vw, 808px);
   height: clamp(1px, 6.55vw, 72px);
   margin: clamp(1px, 6.41vw, 64px) auto;
-  padding-top: clamp(1px, 1.45vw, 16px);
+  padding-top: clamp(1px, 1.09vw, 12px);
   font-size: 1.875rem;
   font-weight: bold;
   border: var(--caret-down_color) solid 0.55rem;
@@ -536,6 +536,7 @@ header {
 .form__area {
   width: clamp(1px, 37.82vw, 416px);
   margin: clamp(1px, 18.18vw, 200px) auto 0;
+  margin-top: 100px;
   text-align: left;
 }
 #subscribe {
@@ -795,9 +796,11 @@ header {
   .anxiety h4 {
     margin-left: clamp(-1000px, -4.27vw, -16px);
     font-size: 1.6rem;
+    letter-spacing: -0.025rem;
   }
   .anxiety h4 span {
     margin-right: clamp(15px, 4vw, 1100px);
+    margin-left: clamp(-1000px, -0.8vw, -3px);
     font-size: 3.6rem;
     letter-spacing: -0.17rem;
   }
